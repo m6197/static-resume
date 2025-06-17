@@ -1,6 +1,39 @@
-# Modern Resume Template
+# 🎨 Modern Resume Template
 
-A beautiful, responsive HTML/CSS resume template with dynamic theme switching, data separation, and AWS deployment capabilities.
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge&logo=amazonaws)](https://d3naenji0vjozf.cloudfront.net)
+[![AWS](https://img.shields.io/badge/AWS-CloudFormation-orange?style=for-the-badge&logo=amazonaws)](https://aws.amazon.com/cloudformation/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![Cost](https://img.shields.io/badge/Monthly_Cost-~$1-brightgreen?style=for-the-badge&logo=dollar)](README.md#cost-optimization)
+
+A beautiful, responsive HTML/CSS resume template with AWS deployment, dynamic themes, and data separation. Features responsive design, CloudFormation infrastructure, and cost-optimized hosting (~$1/month). Perfect for developers and professionals.
+
+## ✨ Key Features
+
+- ✅ **4 Professional Themes** - Instant switching between Modern Blue, Professional Dark, Minimal Green, and Corporate Navy
+- ✅ **Privacy-First Data Separation** - Personal data stays private, template code is shareable
+- ✅ **AWS Deployment Ready** - CloudFormation infrastructure with security best practices
+- ✅ **Cost-Optimized** - Deploy for ~$1-2/month with configurable features
+- ✅ **No Server Required** - Works with direct file access for local development
+- ✅ **Responsive Design** - Perfect on desktop, tablet, and mobile devices
+- ✅ **Infrastructure as Code** - CloudFormation templates with tagging and monitoring
+- ✅ **CI/CD Ready** - GitHub Actions workflow for automated deployments
+
+## 🌐 Live Demo
+
+**[View Live Demo](https://d3naenji0vjozf.cloudfront.net)** - See the template in action
+
+## 📚 Table of Contents
+
+- [Key Features](#-key-features)
+- [Live Demo](#-live-demo)
+- [Quick Start](#-quick-start)
+- [Customization](#-customization)
+- [Available Themes](#-available-themes)
+- [AWS Deployment](#-aws-deployment)
+- [Privacy & Security](#-privacy--security)
+- [Architecture](#-architecture)
+- [Contributing](#-contributing)
+- [License](#-license)
 
 ## 🚀 Quick Start
 
@@ -284,14 +317,35 @@ cd infrastructure
                    └──────────────┘
 ```
 
-## 📝 License
-
-This template is free to use for personal and commercial purposes. Attribution appreciated but not required.
-
 ## 🤝 Contributing
 
-Feel free to submit issues and enhancement requests!
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+### Development Setup
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+### Ideas for Contributions
+- Additional theme variations
+- New deployment targets (Netlify, Vercel, etc.)
+- Enhanced responsive design
+- Additional customization options
+- Performance optimizations
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Built with modern web standards
+- AWS best practices implementation
+- Community-driven development
+- Made with ❤️ for professional developers and architects
 
 ---
 
-**Made with ❤️ for professional developers and architects**
+**⭐ Star this repository if you found it helpful!**
