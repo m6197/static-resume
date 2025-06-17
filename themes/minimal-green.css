@@ -1,0 +1,90 @@
+/* Minimal Green Theme */
+:root {
+    --primary-color: #10b981;
+    --secondary-color: #059669;
+    --accent-color: #f59e0b;
+    --dark-color: #065f46;
+    --light-bg: #f0fdf4;
+    --text-color: #1f2937;
+    --timeline-bg: rgba(255, 255, 255, 0.95);
+}
+
+body {
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+    color: var(--text-color);
+}
+
+.header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+.profile-img {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.section-title {
+    color: var(--dark-color);
+}
+
+.section-title::after {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.timeline::before {
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+}
+
+.timeline-item::before {
+    background: var(--primary-color);
+    box-shadow: 0 0 0 4px var(--primary-color);
+}
+
+.timeline-item::after {
+    background: var(--primary-color);
+}
+
+.job-title {
+    color: var(--dark-color);
+}
+
+.company {
+    color: var(--primary-color);
+}
+
+.skill-category {
+    border-left: 4px solid var(--primary-color);
+}
+
+.skill-category h4 {
+    color: var(--dark-color);
+}
+
+.summary {
+    background: linear-gradient(135deg, var(--light-bg), #f7fee7);
+    border-left: 5px solid var(--primary-color);
+}
+
+.summary-text {
+    color: #374151;
+}
+
+.cert-item {
+    border-left: 4px solid var(--accent-color);
+}
+
+.cert-name {
+    color: var(--dark-color);
+}
+
+.education {
+    background: linear-gradient(135deg, var(--light-bg), #f7fee7);
+    border-left: 4px solid var(--accent-color);
+}
+
+.education h4 {
+    color: var(--dark-color);
+}

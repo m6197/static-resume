@@ -1,0 +1,37 @@
+{
+  "personal": {
+    "name": "Your Full Name",
+    "title": "Your Professional Title",
+    "location": "Your City, Country",
+    "email": "your.email@domain.com",
+    "linkedin": "linkedin.com/in/yourprofile",
+    "profileImage": "assets/images/profile.jpg",
+    "profileInitials": "YN"
+  },
+  "summary": "Your professional summary here. Describe your experience, expertise, and key achievements in 2-3 sentences.",
+  "experience": [
+    {
+      "title": "Your Job Title",
+      "company": "Company Name",
+      "duration": "Start Date - End Date"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Category Name",
+      "tags": ["Skill 1", "Skill 2", "Skill 3"]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Certification Name",
+      "year": "Year"
+    }
+  ],
+  "education": {
+    "degree": "Your Degree",
+    "field": "Field of Study",
+    "institution": "University Name",
+    "year": "Graduation Year"
+  }
+}

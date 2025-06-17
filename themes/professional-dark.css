@@ -1,0 +1,106 @@
+/* Professional Dark Theme */
+:root {
+    --primary-color: #3b82f6;
+    --secondary-color: #1e40af;
+    --accent-color: #10b981;
+    --dark-color: #1f2937;
+    --darker-color: #111827;
+    --light-bg: #374151;
+    --text-color: #f9fafb;
+    --timeline-bg: rgba(31, 41, 55, 0.95);
+}
+
+body {
+    background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+    color: var(--text-color);
+}
+
+.container {
+    background: rgba(31, 41, 55, 0.95);
+    color: var(--text-color);
+}
+
+.header {
+    background: linear-gradient(135deg, var(--darker-color) 0%, var(--dark-color) 100%);
+}
+
+.profile-img {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.section-title {
+    color: var(--text-color);
+}
+
+.section-title::after {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.timeline::before {
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+}
+
+.timeline-item {
+    background: var(--light-bg);
+    color: var(--text-color);
+}
+
+.timeline-item::before {
+    background: var(--primary-color);
+    box-shadow: 0 0 0 4px var(--primary-color);
+}
+
+.timeline-item::after {
+    background: var(--primary-color);
+}
+
+.job-title {
+    color: var(--text-color);
+}
+
+.company {
+    color: var(--primary-color);
+}
+
+.skill-category {
+    background: var(--light-bg);
+    border-left: 4px solid var(--primary-color);
+    color: var(--text-color);
+}
+
+.skill-category h4 {
+    color: var(--text-color);
+}
+
+.summary {
+    background: linear-gradient(135deg, var(--light-bg), var(--dark-color));
+    border-left: 5px solid var(--primary-color);
+}
+
+.summary-text {
+    color: #d1d5db;
+}
+
+.cert-item {
+    background: var(--light-bg);
+    border-left: 4px solid var(--accent-color);
+    color: var(--text-color);
+}
+
+.cert-name {
+    color: var(--text-color);
+}
+
+.education {
+    background: linear-gradient(135deg, var(--light-bg), var(--dark-color));
+    border-left: 4px solid var(--accent-color);
+    color: var(--text-color);
+}
+
+.education h4 {
+    color: var(--text-color);
+}

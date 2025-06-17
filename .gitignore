@@ -1,0 +1,40 @@
+# Personal data files (keep private)
+config.json
+
+# Generated config file (auto-synced from config.json)
+js/config-data.js
+
+# Personal assets
+assets/images/profile.*
+assets/images/*.jpg
+assets/images/*.jpeg
+assets/images/*.png
+assets/images/*.gif
+assets/images/*.webp
+
+# Personal documents
+*.pdf
+resume.pdf
+cv.pdf
+
+# IDE files
+.vscode/
+.idea/
+
+# Claude Code settings
+.claude/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Build output
+dist/
+build/
