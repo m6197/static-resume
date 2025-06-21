@@ -1,355 +1,127 @@
-# 🎨 Modern Resume Template
+# 🌟 Static Resume - Modern Resume Template
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge&logo=amazonaws)](https://d3naenji0vjozf.cloudfront.net)
-[![AWS](https://img.shields.io/badge/AWS-CloudFormation-orange?style=for-the-badge&logo=amazonaws)](https://aws.amazon.com/cloudformation/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-[![Cost](https://img.shields.io/badge/Monthly_Cost-~$1-brightgreen?style=for-the-badge&logo=dollar)](README.md#cost-optimization)
+![GitHub release](https://img.shields.io/github/release/m6197/static-resume.svg) ![GitHub issues](https://img.shields.io/github/issues/m6197/static-resume.svg) ![GitHub stars](https://img.shields.io/github/stars/m6197/static-resume.svg)
 
-A beautiful, responsive HTML/CSS resume template with AWS deployment, dynamic themes, and data separation. Features responsive design, CloudFormation infrastructure, and cost-optimized hosting (~$1/month). Perfect for developers and professionals.
-
-## ✨ Key Features
-
-- ✅ **4 Professional Themes** - Instant switching between Modern Blue, Professional Dark, Minimal Green, and Corporate Navy
-- ✅ **Privacy-First Data Separation** - Personal data stays private, template code is shareable
-- ✅ **AWS Deployment Ready** - CloudFormation infrastructure with security best practices
-- ✅ **Cost-Optimized** - Deploy for ~$1-2/month with configurable features
-- ✅ **No Server Required** - Works with direct file access for local development
-- ✅ **Responsive Design** - Perfect on desktop, tablet, and mobile devices
-- ✅ **Infrastructure as Code** - CloudFormation templates with tagging and monitoring
-- ✅ **CI/CD Ready** - GitHub Actions workflow for automated deployments
-
-## 🌐 Live Demo
-
-**[View Live Demo](https://d3naenji0vjozf.cloudfront.net)** - See the template in action
-
-## 📚 Table of Contents
-
-- [Key Features](#-key-features)
-- [Live Demo](#-live-demo)
-- [Quick Start](#-quick-start)
-- [Customization](#-customization)
-- [Available Themes](#-available-themes)
-- [AWS Deployment](#-aws-deployment)
-- [Privacy & Security](#-privacy--security)
-- [Architecture](#-architecture)
-- [Contributing](#-contributing)
-- [License](#-license)
+Welcome to the **Static Resume** repository! This project offers a modern resume template designed for easy deployment on AWS. With features like dynamic themes and data separation, this template is perfect for anyone looking to create a professional online presence.
 
 ## 🚀 Quick Start
 
-### Local Development
+To get started with your own resume, you can download the latest release from [here](https://github.com/m6197/static-resume/releases). Follow the instructions provided in the release notes to set up your resume.
 
-**Option 1: Direct File Access (Simplest)**
-1. Clone or download this repository
-2. Copy `config.template.json` to `config.json`
-3. Edit `config.json` with your personal information
-4. Run: `node sync-config.js` (syncs data for offline use)
-5. Double-click `index.html` - works without any server!
+## 📋 Features
 
-**Option 2: Local Server (Recommended)**
-1. Follow steps 1-3 above
-2. Run: `python3 -m http.server 8000`
-3. Open: http://localhost:8000
+- **Responsive Design**: The template adjusts seamlessly to different screen sizes, ensuring a great experience on both desktop and mobile devices.
+  
+- **AWS Deployment**: Deploy your resume quickly using AWS services like S3, CloudFront, and CloudFormation.
 
-### AWS Deployment
-1. Configure AWS CLI: `aws configure`
-2. Run: `cd infrastructure && ./deploy.sh`
-3. Your resume will be live on CloudFront with HTTPS
+- **Dynamic Themes**: Customize the look and feel of your resume with multiple themes.
 
-## 📁 Project Structure
+- **Data Separation**: Keep your content organized and easy to update.
 
-```
-resume-template/
-├── index.html                    # Main resume HTML file
-├── config.json                   # Personal data (excluded from git)
-├── config.template.json          # Template for personal data
-├── css/
-│   └── styles.css               # Main stylesheet
-├── js/
-│   ├── theme-switcher.js        # Theme switching functionality
-│   └── data-loader.js           # Dynamic data loading
-├── assets/
-│   └── images/                  # Profile photos and images
-├── themes/                      # Theme variations
-│   ├── modern-blue.css
-│   ├── professional-dark.css
-│   ├── minimal-green.css
-│   └── corporate-navy.css
-├── infrastructure/              # AWS deployment
-│   ├── resume-website.yaml      # CloudFormation template
-│   └── deploy.sh               # Deployment script
-├── .github/workflows/
-│   └── deploy.yml              # GitHub Actions deployment
-├── README.md                   # This file
-└── .gitignore                 # Git ignore file
-```
+- **Cost-Optimized Hosting**: Enjoy hosting for approximately $1 per month.
 
-## 🎨 Features
+## 🛠️ Technologies Used
 
-- **Dynamic Theme Switching** - 4 beautiful themes with instant switching
-- **Data Separation** - Personal data kept separate from template code
-- **AWS Deployment Ready** - CloudFormation template with best practices
-- **Responsive Design** - Looks great on desktop, tablet, and mobile
-- **Modern Aesthetic** - Clean, professional design with subtle animations
-- **Print-Friendly** - Optimized for printing to PDF
-- **Centered Timeline** - Beautiful alternating timeline for experience
-- **Skill Tags** - Visual skill representation with color-coded categories
-- **Certification Section** - Dedicated space for professional certifications
-- **GitHub Actions** - Automated deployment pipeline
+This project utilizes a variety of technologies, including:
 
-## 🛠️ Customization
+- **HTML**: For structuring the resume.
+- **CSS**: For styling and responsive design.
+- **JavaScript**: For interactive features.
+- **AWS CloudFormation**: To manage infrastructure as code.
+- **AWS S3**: For static website hosting.
+- **AWS CloudFront**: For content delivery.
 
-### Personal Information
-All personal data is stored in `config.json`. Copy `config.template.json` to `config.json` and customize:
+## 📦 Installation
 
-```json
-{
-  "personal": {
-    "name": "Your Full Name",
-    "title": "Your Professional Title",
-    "location": "Your City, Country",
-    "email": "your.email@domain.com",
-    "linkedin": "linkedin.com/in/yourprofile",
-    "profileImage": "assets/images/profile.jpg",
-    "profileInitials": "YN"
-  },
-  "summary": "Your professional summary...",
-  "experience": [...],
-  "skills": [...],
-  "certifications": [...],
-  "education": {...}
-}
-```
-
-### Theme Customization
-Create new themes by copying existing theme files in the `themes/` directory. Each theme uses CSS variables:
-
-```css
-:root {
-    --primary-color: #667eea;
-    --secondary-color: #764ba2;
-    --accent-color: #28a745;
-    --dark-color: #2c3e50;
-    --light-bg: #f8f9fa;
-    --text-color: #333;
-}
-```
-
-### Adding Profile Image
-1. Place your image in `assets/images/` (e.g., `profile.jpg`)
-2. Update `config.json`:
-   ```json
-   {
-     "personal": {
-       "profileImage": "assets/images/profile.jpg",
-       "profileInitials": "YN"
-     }
-   }
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/m6197/static-resume.git
    ```
-3. **Important:** Run `node sync-config.js` after updating config.json
-4. Recommended size: 150x150px or larger (square format)
 
-### Data Management
-- **config.template.json** - Template with dummy data (committed to git)
-- **config.json** - Your personal data (excluded from git)
-- **js/config-data.js** - Auto-generated fallback (excluded from git)
-- **Sync command:** `node sync-config.js` - Run after editing config.json
+2. **Navigate to the Directory**:
+   ```bash
+   cd static-resume
+   ```
 
-**Privacy Protection:**
-- ✅ Personal data never committed to git
-- ✅ Template code is shareable publicly
-- ✅ Only dummy/example data in repository
-- ✅ Personal images excluded from git
+3. **Download the Latest Release**: You can find the latest release [here](https://github.com/m6197/static-resume/releases). Follow the instructions in the release notes to set it up.
 
-**Why two files?**
-- Enables direct file access (double-click index.html)
-- Maintains server compatibility (local/AWS deployment)
-- Same template works everywhere
+4. **Open the HTML File**: Open `index.html` in your web browser to view your resume.
 
-## 🎭 Available Themes
+## 📊 Usage
 
-- **Modern Blue** - Original blue gradient theme
-- **Professional Dark** - Dark theme for modern look
-- **Minimal Green** - Clean green theme
-- **Corporate Navy** - Professional navy blue theme
+1. **Customize Your Resume**: Edit the `data.json` file to update your personal information, work experience, and skills.
 
-### Creating New Themes
-1. Copy an existing theme file from `themes/`
-2. Modify the CSS variables
-3. Add the new theme to the dropdown in `js/theme-switcher.js`
+2. **Select a Theme**: Change the theme by modifying the CSS file. You can create your own themes or choose from the existing ones.
 
-## 📱 Responsive Breakpoints
+3. **Deploy to AWS**:
+   - Follow the instructions in the `AWS-Deployment.md` file for deploying your resume using AWS services.
 
-- **Desktop**: 1200px and above
-- **Tablet**: 768px - 1199px
-- **Mobile**: Below 768px
+## 🌐 Deployment Guide
 
-## 🖨️ Print Optimization
+### AWS Setup
 
-The template includes print-specific CSS:
-- Removes background gradients
-- Optimizes spacing for A4 paper
-- Ensures all content fits properly
-- Maintains professional appearance
+1. **Create an AWS Account**: If you don’t have one, sign up at [AWS](https://aws.amazon.com/).
 
-To create a PDF:
-1. Open in browser
-2. Press Ctrl+P (Cmd+P on Mac)
-3. Select "Save as PDF"
-4. Choose appropriate settings
+2. **Set Up IAM Roles**: Create roles with the necessary permissions for S3 and CloudFormation.
 
-## 🚀 AWS Deployment
+3. **Deploy Using CloudFormation**:
+   - Use the provided CloudFormation template to set up your infrastructure.
+   - Follow the steps in the `AWS-Deployment.md` file for detailed instructions.
 
-### Prerequisites
-- AWS CLI configured (`aws configure`)
-- Appropriate AWS permissions
+### Hosting Your Resume
 
-### Manual Deployment
+- Once deployed, your resume will be accessible via the URL provided in the CloudFormation outputs.
 
-**Basic deployment (Melbourne region, all features enabled):**
-```bash
-cd infrastructure
-./deploy.sh
-```
+## 🎨 Themes
 
-**Deploy to different region:**
-```bash
-./deploy.sh --region us-west-2              # Deploy to US West (Oregon)
-./deploy.sh --region eu-west-1              # Deploy to EU (Ireland)
-./deploy.sh --region ap-northeast-1         # Deploy to Asia Pacific (Tokyo)
-```
+The template comes with several themes. You can easily switch between them by changing the CSS file linked in your HTML. Here are a few examples:
 
-**With custom domain:**
-```bash
-./deploy.sh --domain resume.example.com --hosted-zone-id Z1234567890 --certificate-arn arn:aws:acm:us-east-1:123456789:certificate/...
-```
+- **Default Theme**: Clean and minimalistic.
+- **Dark Theme**: Modern and sleek.
+- **Colorful Theme**: Vibrant and eye-catching.
 
-**Minimal deployment (no WAF, no Route 53, no access logs):**
-```bash
-./deploy.sh --disable-waf --disable-route53 --disable-access-logs
-```
+## 📝 Contributing
 
-**Full custom configuration:**
-```bash
-./deploy.sh --region ap-southeast-2 --environment prod --project-name my-resume --enable-waf false
-```
+We welcome contributions! If you want to add features or improve the template, please follow these steps:
 
-### GitHub Actions Deployment
-1. Fork this repository
-2. **Add GitHub Secrets:**
-   - `AWS_ROLE_ARN`: IAM role for deployment
-   - `PERSONAL_NAME`, `PERSONAL_TITLE`, etc.: Your personal data
-   - `DOMAIN_NAME`, `HOSTED_ZONE_ID`, `CERTIFICATE_ARN`: For custom domain
-3. **Add GitHub Variables (optional):**
-   - `AWS_REGION`: AWS region (default: ap-southeast-2)
-   - `ENABLE_WAF`: true/false (default: false)
-   - `ENABLE_ROUTE53`: true/false (default: true)
-   - `ENABLE_ACCESS_LOGS`: true/false (default: true)
-   - `ENVIRONMENT`: dev/staging/prod (default: prod)
-   - `PROJECT_NAME`: Project name for cost tracking (default: resume-website)
-4. Push to main branch to trigger deployment
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature/YourFeature`).
+6. Open a pull request.
 
-### Infrastructure Features
+## 📚 Documentation
 
-**Core Features (Always Enabled):**
-- ✅ S3 static website hosting with encryption
-- ✅ CloudFront CDN with HTTP/2, HTTP/3, and gzip
-- ✅ SSL/TLS certificate support (custom or CloudFront default)
-- ✅ Origin Access Control (OAC) for security
-- ✅ Custom error pages (404/403 → index.html)
-- ✅ Automated cache invalidation
+For detailed documentation, check the following files in the repository:
 
-**Optional Features (Configurable):**
-- 🔧 **Route 53 DNS** - Custom domain configuration (enabled by default)
-- 🔧 **WAF Protection** - Rate limiting and common attack protection (disabled by default)
-- 🔧 **Access Logs** - CloudFront and S3 access logging (enabled by default)
+- **[AWS-Deployment.md](./AWS-Deployment.md)**: Instructions for deploying your resume on AWS.
+- **[Customization.md](./Customization.md)**: How to customize your resume.
 
-**Cost Optimization:**
-- Deploy to cheaper regions (Melbourne/Sydney often more cost-effective than US)
-- WAF disabled by default (saves ~$5-10/month, enable with `--enable-waf true`)
-- Route 53: ~$0.50/month per hosted zone (only needed with custom domains)
-- Access Logs: Minimal storage costs for log files
+## 📞 Support
 
-**Region Selection:**
-- **ap-southeast-2** (Melbourne): Default, often cost-effective for Australian users
-- **us-east-1** (N. Virginia): Cheapest overall, but higher latency for Australian users
-- **us-west-2** (Oregon): Good balance of cost and latency for US users
-- **eu-west-1** (Ireland): Good for European users
+If you encounter any issues or have questions, feel free to open an issue in the repository. You can also check the [Releases](https://github.com/m6197/static-resume/releases) section for updates and fixes.
 
-**Important:** ACM certificates for CloudFront must be created in us-east-1 regardless of deployment region
+## 🛠️ Roadmap
 
-## 🔧 Browser Support
+We plan to add more features and improvements, including:
 
-- Chrome (recommended)
-- Firefox
-- Safari
-- Edge
-- Internet Explorer 11+
+- More theme options.
+- Enhanced customization features.
+- Integration with LinkedIn and other platforms.
 
-## 🔒 Privacy & Security
+## 🤝 Acknowledgments
 
-**Data Protection:**
-- Personal data (`config.json`) is excluded from version control
-- Generated fallback file (`js/config-data.js`) is also excluded from git
-- Template code can be safely shared publicly
+Thanks to the open-source community for their contributions and support. Special thanks to the creators of the libraries and tools used in this project.
 
-**Security Considerations:**
-- **Direct file access:** Data embedded in JavaScript (viewable in source)
-- **Server deployment:** Data loaded via secure JSON (preferred)
-- **Production tip:** Remove `js/config-data.js` before AWS deployment for extra privacy
+## 📅 License
 
-**AWS Security:**
-- WAF protection against common attacks
-- HTTPS-only with modern TLS
-- S3 bucket encryption and access controls
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
-## 🏗️ Architecture
+## 📢 Stay Updated
 
-```
-┌─────────────┐    ┌──────────────┐    ┌─────────────┐
-│   Route 53  │────│  CloudFront  │────│     S3      │
-│     DNS     │    │     CDN      │    │   Bucket    │
-└─────────────┘    └──────────────┘    └─────────────┘
-                           │
-                   ┌──────────────┐
-                   │     WAF      │
-                   │  Protection  │
-                   └──────────────┘
-```
+To stay updated on the latest changes and releases, follow this repository and check the [Releases](https://github.com/m6197/static-resume/releases) section.
 
-## 🤝 Contributing
+## 🎉 Conclusion
 
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-### Development Setup
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-### Ideas for Contributions
-- Additional theme variations
-- New deployment targets (Netlify, Vercel, etc.)
-- Enhanced responsive design
-- Additional customization options
-- Performance optimizations
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Built with modern web standards
-- AWS best practices implementation
-- Community-driven development
-- Made with ❤️ for professional developers and architects
-
----
-
-**⭐ Star this repository if you found it helpful!**
-
-**🔗 Links:**
-- [Live Demo](https://d3naenji0vjozf.cloudfront.net)
-- [GitHub Repository](https://github.com/rtananthan/static-resume)
+Thank you for checking out the Static Resume project! We hope this template helps you create a stunning online resume. Happy coding!
